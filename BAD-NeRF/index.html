@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="BAD-NeRF: Bundle Adjusted Deblur Neural Radiance Fields jointly learns the 3D representation and optimizes the camera poses with blurry images and inaccurate initial poses.">
+  <meta name="keywords" content="BAD-NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>😈BAD-NeRF</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/westlake.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">😈BAD-NeRF: <font color="#9900FF">B</font>undle <font color="#9900FF">A</font>djusted <font color="#9900FF">D</font>eblur Neural Radiance Fields</h1>
+          <h1 class="title is-3 publication-title">CVPR 2023</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://github.com/wangpeng000">Peng Wang</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://github.com/LingzheZhao">Lingzhe Zhao</a><sup>2</sup>,</span>
+            <span class="author-block">
+              Ruijie Ma<sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://ethliup.github.io/">Peidong Liu</a><sup>2</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Zhejiang University,</span>
+            <span class="author-block"><sup>2</sup>Westlake University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Wang_BAD-NeRF_Bundle_Adjusted_Deblur_Neural_Radiance_Fields_CVPR_2023_paper.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              <span class="link-block">
+                <a href="https://openaccess.thecvf.com/content/CVPR2023/supplemental/Wang_BAD-NeRF_Bundle_Adjusted_CVPR_2023_supplemental.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Sup</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2211.12853"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>ArXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/WU-CVGL/BAD-NeRF"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://westlakeu-my.sharepoint.com/personal/cvgl_westlake_edu_cn/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fcvgl%5Fwestlake%5Fedu%5Fcn%2FDocuments%2FBAD%2DNeRF&ga=1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=xoES4eONYoA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Poster Link. -->
+              <span class="link-block">
+                <a href="./static/images/cvpr23_poster.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Poster</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/comparison1.jpg">
+      <h2 class="subtitle has-text-centered">
+        Given a set of severe motion blurred images, <font color="#9900FF">BAD-NeRF</font> <font color="#c00000">jointly</font> learns the <font color="#ed7d31">neural radiance fields</font>
+        and recovers the <font color="#209cee">camera motion trajectories</font> within exposure time. It synthesizes novel images of
+        higher quality than prior works.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Neural Radiance Fields (NeRF) have received considerable attention recently, due to
+            its impressive capability in photo-realistic 3D reconstruction and novel view synthesis,
+            given a set of posed camera images. Earlier work usually assumes the input images are of good quality.
+            However, image degradation (e.g. image motion blur in low-light conditions) can easily happen in
+            real-world scenarios, which would further affect the rendering quality of NeRF.
+          </p>
+          <p>
+            In this paper, we present a novel bundle adjusted deblur Neural Radiance Fields (BAD-NeRF),
+            which can be robust to severe motion blurred images and inaccurate camera poses.
+            Our approach models the physical image formation process of a motion blurred image,
+            and jointly learns the parameters of NeRF and recovers the camera motion trajectories
+            during exposure time. 
+          </p>
+          <p>
+            In experiments, we show that by directly modeling the real physical image formation process,
+            BAD-NeRF achieves superior performance over prior works on both synthetic and real datasets.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Pipeline. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Pipeline</h2>
+        <image src="./static/images/pipeline.jpg" class="img-responsive" alt="overview"><br>
+        <div class="content has-text-justified">
+          <p>
+            <strong>
+              Motion Blur Image Formation Model
+            </strong>
+          </p>
+          <p>
+            The mathematical modeling of motion blur process involves integrating over a set of virtual sharp images,
+            as shown by the <font color="#06ad4b">green line</font> in the pipeline figure.
+
+          </p>
+          <p>
+            <b>
+              Linear Camera Motion Trajectory Modeling
+            </b>
+          </p>
+          <p>
+            We approximate the camera motion with a linear model during exposure time which is usually small.
+            Specifically, two camera poses in <strong>SE</strong>(3) space are parameterized, one at the beginning of the exposure <strong>T</strong><sub>start</sub>
+            andone at the end <strong>T</strong><sub>end</sub>.
+            Between these two poses, we linearly interpolate poses in the Lie-algebra of <strong>SE</strong>(3),
+            as shown by the <font color="#209cee">blue line</font> in the pipeline figure.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Pipeline. -->
+
+    <!-- Cubic B-Spline. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Complex Camera Motion Trajectory Modeling</h2>
+        <image src="./static/images/cubic.jpg" class="img-responsive" alt="overview"><br>
+        <div class="content has-text-justified">
+          <p>
+            <b>
+              Cubic B-Spline Formulation
+            </b>
+          </p>
+          <p>
+            Compared to a linear-spline, a more complex camera trajectory within exposure time can be controlled
+            by four control knots in <strong>SE</strong>(3) space,
+            denoted as <strong>T</strong><sub>0</sub>, <strong>T</strong><sub>1</sub>, <strong>T</strong><sub>2</sub> and <strong>T</strong><sub>3</sub>.
+            More details can be found in our supplementary materials.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Cubic B-Spline. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/xoES4eONYoA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Results. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            We present the rendered novel view video and pose estimation results.
+            The experimental results demonstarte that our method  can effectively deblur images,
+            render novel view images and recover the camera motion trajectories accurately
+            within exposure time.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Results. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-size-5">Novel View Synthesis Comparison</h2>
+        <div class="content has-text-justified">
+          <video id="teaser" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/comparison-nvs.mp4"
+                    type="video/mp4">
+          </video>
+        <!-- <h2 class="subtitle has-text-centered"> -->
+          <p>
+            <font color="#9900FF">BAD-NeRF</font> delivers superior novel view synthesis performance over prior methods
+            when input images are motion blurred.
+          </p>
+        </div>
+        <!-- </h2> -->
+      </div>
+    </div>
+    <!--/ Paper video. -->
+
+    <!-- Pose estimation. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-size-5">Trajectory Visualization</h2>
+        <div class="content has-text-justified">
+          <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/comparison-nvs.mp4"
+                    type="video/mp4">
+          </video> -->
+          <image src="./static/images/pose-estimation.jpg" class="img-responsive" alt="overview"></image>
+          <!-- <h2 class="subtitle has-text-centered"> -->
+          <p>
+            Qualitative Comparisons of estimated camera poses on <a href="https://github.com/limacv/Deblur-NeRF">Deblur-NeRF</a> dataset.
+            These are results on <i>Cozy2room</i>, <i>Factory</i>, <i>Pool</i>, <i>Tanabata</i> and <i>Trolley</i> sequences respectively.
+            The results demonstrate that <font color="#9900FF">BAD-NeRF</font> delivers reasonable
+            camera pose estimations and performs better than both <a href="https://github.com/colmap/colmap">COLMAP</a>
+            and <a href="https://github.com/chenhsuanlin/bundle-adjusting-NeRF">BARF</a>.
+          </p>
+          <!-- </h2> -->
+        </div>
+      </div>
+    </div>
+    <!--/ Pose estimation. -->
+  </div>
+</section>
+
+
+<section class="teaser" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@InProceedings{wang2023badnerf,
+      author    = {Wang, Peng and Zhao, Lingzhe and Ma, Ruijie and Liu, Peidong},
+      title     = {{BAD-NeRF: Bundle Adjusted Deblur Neural Radiance Fields}},
+      booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+      month     = {June},
+      year      = {2023},
+      pages     = {4170-4179}
+  }</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <!-- <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://homes.cs.washington.edu/~kpar/nerfies/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div> -->
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            The source code of this website is borrowed from 
+            <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
+          </p>
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/wangpeng000/wangpeng000.github.io/tree/main/BAD-NeRF">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
