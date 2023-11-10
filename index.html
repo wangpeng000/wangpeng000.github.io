@@ -1,0 +1,251 @@
+<!DOCTYPE HTML>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="google-site-verification" content="tHWkCv5kReG-fq--FCW61agzVOiLPlJyOQ_-2OEmgy8" />
+
+  <title>Peng Wang</title>
+  <meta name="description"
+        content="The homepage of Peng Wang">
+  <meta name="keywords" content="Peng Wang, homepage, github, website">
+  <meta name="author" content="Peng Wang">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
+</head>
+
+<body>
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <tr style="padding:0px">
+      <td style="padding:0px">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr style="padding:0px">
+            <td style="padding:2.5%;width:63%;vertical-align:middle">
+              <p style="text-align:center">
+                <name>Peng Wang 王朋</name>
+              </p>
+              <p>I am currently a second-year Ph.D. student at the School of Engineering 
+                in the Westlake University, in collaboration with Zhejiang University.
+                My PhD advisor is <a href="https://ethliup.github.io/">Prof. Peidong Liu</a>.
+                Before that, I received my Bachelor and Master Degree from Huazhong University of Science and Technology respectively in 2019 and 2022.
+              </p>
+              
+              <p>I'm interested in 3D vision (e.g. Neural Rendering) and Generative Models.
+              </p>
+
+              <p style="text-align:center">
+                <a href="mailto:wangpeng@westlake.edu.cn">Email</a> &nbsp/&nbsp
+                <a href="https://github.com/wangpeng000">Github</a> &nbsp/&nbsp
+                <a href="https://scholar.google.com/citations?user=xZTSmVsAAAAJ&hl=en">Google Scholar</a> &nbsp/&nbsp
+                <!-- <a href="https://twitter.com/xxx">Twitter</a> &nbsp/&nbsp
+                <a href="linkedin.com/in/xxx">LinkedIn</a> &nbsp/&nbsp -->
+                <a href="data/CV.pdf">CV</a>
+              </p>
+            </td>
+            <td style="padding:2.5%;width:30%;max-width:30%">
+              <a href="images/profile.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/profile_circle.jpg" class="hoverZoomLink"></a>
+            </td>
+          </tr>
+        </tbody></table>
+        
+        <!-- <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+          <tr>
+            <td>
+              <heading>News</heading>
+              <br><br>
+              <li>COMP5411 Advanced Computer Graphics, 2022-23 Fall </li>
+              <li>COMP5411 Advanced Computer Graphics, 2020-21 Fall</li>
+              <li>COMP2011 Programming with C++, 2019-20 Spring </li>
+            </td>
+          </tr>
+        </tbody></table> -->
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <heading>Publications</heading>
+              <p>
+                Representative papers are <span class="highlight">highlighted</span>, * denotes equal contribution.
+              </p>
+            </td>
+          </tr>
+        </tbody></table>
+        
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+					
+
+          
+          <tr onmouseout="badnerf_stop()" onmouseover="badnerf_start()"  bgcolor="#ffffd0">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='badnerf'>
+                  <video  width=100% height=100% muted autoplay loop>
+                    <source src="images/badnerf_output.mp4" type="video/mp4">Your browser does not support the video tag.
+                  </video></div>
+                <img src='images/badnerf_input.jpg' width="160">
+                </div>
+                <script type="text/javascript">
+                  function badnerf_start() {
+                    document.getElementById('badnerf').style.opacity = "1";
+                  }
+    
+                  function badnerf_stop() {
+                    document.getElementById('badnerf').style.opacity = "0";
+                  }
+                  badnerf_stop()
+               </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <papertitle>BAD-NeRF: Bundle Adjusted Deblur Neural Radiance Fields</papertitle>
+              <br>
+              <strong>Peng Wang</strong>,
+              <a href="https://github.com/LingzheZhao">Lingzhe Zhao</a>,
+              Ruijie Ma,
+              <a href="https://ethliup.github.io/">Peidong Liu</a>
+              <br>
+              <em>CVPR</em>, 2023
+              <br>
+              <a href="https://wangpeng000.github.io/BAD-NeRF/">project page</a>
+              /
+              <a href="https://arxiv.org/abs/2211.12853">arxiv</a>
+              /
+              <a href="https://limacv.github.io/VideoLoop3D_web/images/CVPR2023.pdf">pdf</a>
+              /
+              <a href="https://github.com/WU-CVGL/BAD-NeRF">code</a>
+              <p></p>
+              <p>
+                BAD-NeRF jointly learns the 3D representation and optimizes the camera motion trajectories within exposure time from blurry images and inaccurate initial poses.
+              </p>
+              <p>
+                <strong>Nov. 2023 update:</strong> we have released the NeRFstudio version <a href="https://github.com/WU-CVGL/BAD-NeRFstudio">BAD-NeRFstudio</a>.
+              </p>
+            </td>
+          </tr>
+
+          <tr onmouseout="usbnerf_stop()" onmouseover="usbnerf_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='usbnerf'>
+                  <video  width=100% height=100% muted autoplay loop>
+                    <source src="images/usbnerf_output.mp4" type="video/mp4">Your browser does not support the video tag.
+                  </video></div>
+                <img src='images/usbnerf_input.jpg' width="160">
+                </div>
+                <script type="text/javascript">
+                  function usbnerf_start() {
+                    document.getElementById('usbnerf').style.opacity = "1";
+                  }
+    
+                  function usbnerf_stop() {
+                    document.getElementById('usbnerf').style.opacity = "0";
+                  }
+                  usbnerf_stop()
+               </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <papertitle>USB-NeRF: Unrolling Shutter Bundle Adjusted Neural Radiance Fields</papertitle>
+              <br>
+              Moyang Li*,
+              <strong>Peng Wang*</strong>,
+              <a href="https://github.com/LingzheZhao">Lingzhe Zhao</a>,
+              <a href="https://scholar.google.com/citations?user=0z2qluIAAAAJ&hl=en&oi=ao">Bangyan Liao</a>
+              <a href="https://ethliup.github.io/">Peidong Liu</a>
+              <br>
+              <em>in submission</em>, 2023
+              <br>
+              <a href="https://arxiv.org/abs/2310.02687">arxiv</a>
+              <p></p>
+              <p>
+                USB-NeRF can remove rolling shutter effect and recover high-fidelity high frame-rate global shutter video from a sequence of rolling shutter images.
+              </p>
+            </td>
+          </tr>
+          
+        </tbody></table>
+        
+        
+				<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr>
+          <td style="padding:20px;width:100%;vertical-align:middle">
+            <heading>Other Projects</heading>
+            <p>
+              Some interesting projects that I worked on, including research projects.
+            </p>
+          </td>
+        </tr>
+      </tbody></table>
+      
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        
+        <tr onmouseout="badnerfstudio_stop()" onmouseover="badnerfstudio_start()">
+          <td style="padding:20px;width:25%;vertical-align:middle">
+            <div class="one">
+              <div class="two" id='badnerfstudio'>
+                <video  width=100% height=100% muted autoplay loop>
+                  <source src="images/badnerfstudio.mp4" type="video/mp4">Your browser does not support the video tag.
+                </video></div>
+              <img src='images/badnerfstudio.jpg' width="160">
+              </div>
+              <script type="text/javascript">
+                function badnerfstudio_start() {
+                  document.getElementById('badnerfstudio').style.opacity = "1";
+                }
+  
+                function badnerfstudio_stop() {
+                  document.getElementById('badnerfstudio').style.opacity = "0";
+                }
+                badnerfstudio_stop()
+             </script>
+          </td>
+          <td style="padding:20px;width:75%;vertical-align:middle">
+            <papertitle>BAD-NeRFstudio: BAD-NeRF Accelerated</papertitle>
+            <br>
+              <em>Research Project</em>, 2023
+            <br>
+            <br>
+            <a href="https://github.com/WU-CVGL/BAD-NeRFstudio">code</a>
+            <p></p>
+            <p>
+            BAD-NeRFstudio can shorten the training of BAD-NeRF to minutes.
+            </p>
+          </td>
+        </tr>
+
+
+      </tbody></table>
+        
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+          <tr>
+            <td>
+              <heading>Selected Awards</heading>
+              <br><br>
+              <li>Muyuan Fellowship (20000 CNY),Westlake University-Muyuan joint Research Institute, 2022</li>
+              <li>National Academic First Class Scholarship for Postgraduates, HUST, 2021, 2022</li>
+              <li>7th in HUAWEI Software Elite Challenge (Huazhong Division), 2020</li>
+              <li>3rd in China Youth Cup National College Students Mathematical Modeling Competition, 2020</li>
+            </td>
+          </tr>
+        </tbody></table>
+
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr>
+            <td style="padding:0px">
+              <p style="text-align:center;font-size:small;">
+                Thanks to <a href="http://jonbarron.info">Jon Barron</a> for sharing
+                the <a href="https://github.com/jonbarron/jonbarron_website">source code</a> of his personal webpage.
+              </p>
+            </td>
+          </tr>
+        </tbody></table>
+        
+        <table>
+            <div style="width:20%;margin:0 auto;">
+              <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=iHv3_lG2sPiCA_ZhOlZUbBWq8UsaDqV2MTUO58ufGVQ&cl=ffffff&w=a">
+              </script>
+            </div>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
