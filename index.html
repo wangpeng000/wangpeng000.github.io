@@ -158,6 +158,49 @@
               </p>
             </td>
           </tr>
+
+          <tr onmouseout="svdd_stop()" onmouseover="svdd_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+              <div class="two" id='svdd'>
+                <img src='images/svdd_output.jpg' width="160"></div>
+              <!-- <div class="two" id='dreamfusion_image'>
+                <video  width=100% height=100% muted autoplay loop>
+                  <source src="images/dreamfusion.mp4" type="video/mp4">Your browser does not support the video tag.
+                </video></div> -->
+              <img src='images/svdd_input.jpg' width="160">
+              </div>
+              <script type="text/javascript">
+                function svdd_start() {
+                  document.getElementById('svdd').style.opacity = "1";
+                }
+
+                function svdd_stop() {
+                  document.getElementById('svdd').style.opacity = "0";
+                }
+                svdd_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <papertitle>Self-supervised Context Learning for Visual Inspection of Industrial Defects</papertitle>
+              <br>
+              <strong>Peng Wang</strong>,
+              <a href="https://scholar.google.com/citations?user=pHWjvoQAAAAJ&hl=en&oi=ao">Haiming Yao</a>,
+              Wenyong Yu
+              <br>
+              <em>arxiv</em>, 2023
+              <br>
+              <!-- <a href="https://arxiv.org/abs/">arXiv</a>
+              / -->
+              <a href="https://wangpeng000.github.io/paper/SVDD/pdf/svdd.pdf">pdf</a>
+              /
+              <a href="https://github.com/wangpeng000/VisualInspection">code</a>
+              <p></p>
+              <p>
+              We address the challenge of detecting object defects through the lens of the jigsaw puzzle problem in self-supervised learning.
+              </p>
+            </td>
+          </tr>
           
         </tbody></table>
         
