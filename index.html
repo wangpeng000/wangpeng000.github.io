@@ -73,6 +73,45 @@
 					
 
           
+          <tr onmouseout="usbnerf_stop()" onmouseover="usbnerf_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='usbnerf'>
+                  <video  width=100% height=100% muted autoplay loop>
+                    <source src="images/usbnerf_output.mp4" type="video/mp4">Your browser does not support the video tag.
+                  </video></div>
+                <img src='images/usbnerf_input.jpg' width="160">
+                </div>
+                <script type="text/javascript">
+                  function usbnerf_start() {
+                    document.getElementById('usbnerf').style.opacity = "1";
+                  }
+    
+                  function usbnerf_stop() {
+                    document.getElementById('usbnerf').style.opacity = "0";
+                  }
+                  usbnerf_stop()
+               </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <papertitle>USB-NeRF: Unrolling Shutter Bundle Adjusted Neural Radiance Fields</papertitle>
+              <br>
+              <a href="https://scholar.google.com/citations?user=Qvu8bNYAAAAJ&hl=en&oi=sra">Moyang Li*</a>,
+              <strong>Peng Wang*</strong>,
+              <a href="https://github.com/LingzheZhao">Lingzhe Zhao</a>,
+              <a href="https://scholar.google.com/citations?user=0z2qluIAAAAJ&hl=en&oi=ao">Bangyan Liao</a>,
+              <a href="https://ethliup.github.io/">Peidong Liu</a>
+              <br>
+              <em>ICLR</em>, 2024
+              <br>
+              <a href="https://arxiv.org/abs/2310.02687">arxiv</a>
+              <p></p>
+              <p>
+                USB-NeRF can remove rolling shutter effect and recover high-fidelity high frame-rate global shutter video from a sequence of rolling shutter images.
+              </p>
+            </td>
+          </tr>
+
           <tr onmouseout="badnerf_stop()" onmouseover="badnerf_start()"  bgcolor="#ffffd0">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
@@ -114,45 +153,6 @@
               </p>
               <p>
                 <strong>Nov. 2023 update:</strong> we have released the NeRFstudio version <a href="https://github.com/WU-CVGL/BAD-NeRFstudio">BAD-NeRFstudio</a>.
-              </p>
-            </td>
-          </tr>
-
-          <tr onmouseout="usbnerf_stop()" onmouseover="usbnerf_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='usbnerf'>
-                  <video  width=100% height=100% muted autoplay loop>
-                    <source src="images/usbnerf_output.mp4" type="video/mp4">Your browser does not support the video tag.
-                  </video></div>
-                <img src='images/usbnerf_input.jpg' width="160">
-                </div>
-                <script type="text/javascript">
-                  function usbnerf_start() {
-                    document.getElementById('usbnerf').style.opacity = "1";
-                  }
-    
-                  function usbnerf_stop() {
-                    document.getElementById('usbnerf').style.opacity = "0";
-                  }
-                  usbnerf_stop()
-               </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <papertitle>USB-NeRF: Unrolling Shutter Bundle Adjusted Neural Radiance Fields</papertitle>
-              <br>
-              <a href="https://scholar.google.com/citations?user=Qvu8bNYAAAAJ&hl=en&oi=sra">Moyang Li*</a>,
-              <strong>Peng Wang*</strong>,
-              <a href="https://github.com/LingzheZhao">Lingzhe Zhao</a>,
-              <a href="https://scholar.google.com/citations?user=0z2qluIAAAAJ&hl=en&oi=ao">Bangyan Liao</a>,
-              <a href="https://ethliup.github.io/">Peidong Liu</a>
-              <br>
-              <em>ICLR</em>, 2024
-              <br>
-              <a href="https://arxiv.org/abs/2310.02687">arxiv</a>
-              <p></p>
-              <p>
-                USB-NeRF can remove rolling shutter effect and recover high-fidelity high frame-rate global shutter video from a sequence of rolling shutter images.
               </p>
             </td>
           </tr>
@@ -262,7 +262,8 @@
               <li>Muyuan Fellowship (20000 CNY), Westlake University-Muyuan joint Research Institute, 2022</li>
               <li>National Academic First Class Scholarship for Postgraduates, HUST, 2021, 2022</li>
               <li>7th in HUAWEI Software Elite Challenge (Huazhong Division), 2020</li>
-              <li>3rd in China Youth Cup National College Students Mathematical Modeling Competition, 2020</li>
+              <li>Third Prize in China Youth Cup National College Students Mathematical Modeling Competition, 2020</li>
+              <li>First Prize of the Robot Innovation Design Competition of HUST, 2019</li>
             </td>
           </tr>
         </tbody></table>
