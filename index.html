@@ -45,18 +45,6 @@
             </td>
           </tr>
         </tbody></table>
-        
-        <!-- <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-          <tr>
-            <td>
-              <heading>News</heading>
-              <br><br>
-              <li>COMP5411 Advanced Computer Graphics, 2022-23 Fall </li>
-              <li>COMP5411 Advanced Computer Graphics, 2020-21 Fall</li>
-              <li>COMP2011 Programming with C++, 2019-20 Spring </li>
-            </td>
-          </tr>
-        </tbody></table> -->
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
@@ -72,6 +60,54 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 					
 
+          
+          <tr onmouseout="badgaussian_stop()" onmouseover="badgaussian_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+              <div class="two" id='badgaussian_output'>
+                <video  width=100% height=100% muted autoplay loop>
+                  <source src="images/badgaussian_output.mp4" type="video/mp4">Your browser does not support the video tag.
+                </video></div>
+              <video width=100% height=100% muted autoplay loop id="badgaussian_input">
+                <source src="images/badgaussian_input.mp4" type="video/mp4">Your browser does not support the video tag.
+              </video>
+              </div>
+              <script type="text/javascript">
+                function badgaussian_start() {
+                  document.getElementById('badgaussian_output').style.display = '';
+                  document.getElementById('badgaussian_input').style.display = 'none'
+                }
+
+                function badgaussian_stop() {
+                  document.getElementById('badgaussian_output').style.display = 'none';
+                  document.getElementById('badgaussian_input').style.display = ''
+                }
+                badgaussian_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <papertitle>BAD-Gaussians: Bundle Adjusted Deblur Gaussian Splatting</papertitle>
+              <br>
+              <a href="https://github.com/LingzheZhao">Lingzhe Zhao*</a>,
+              <strong>Peng Wang*</strong>,
+              <a href="https://ethliup.github.io/">Peidong Liu</a>
+              <br>
+              <em>Arxiv</em>, 2024
+              <br>
+              <a href="https://lingzhezhao.github.io/BAD-Gaussians/">project page</a>
+              /
+              <a href="https://arxiv.org/abs/2403.11831">Arxiv</a>
+              /
+              <a href="https://github.com/WU-CVGL/BAD-Gaussians">code</a>
+              <p></p>
+              <p>
+                BAD-Gaussians successfully deblurs severe motion-blurred images, synthesizes higher-quality novel views, and achieves real-time rendering, surpassing previous SOTA implicit deblurring rendering methods.
+              </p>
+              <!-- <p>
+                <strong>News!
+              </p> -->
+            </td>
+          </tr>
           
           <tr onmouseout="usbnerf_stop()" onmouseover="usbnerf_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
