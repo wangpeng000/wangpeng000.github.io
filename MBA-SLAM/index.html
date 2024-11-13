@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="MBA-SLAM: Motion Blur Aware Dense Visual SLAM with Radiance Fields Representation">
+  <meta name="keywords" content="MBA-SLAM">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MBA-SLAM</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="./static/css/bootstrap-4.4.1.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+  
+  
+  
+  
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/72.png">
+
+  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/app.js"></script>
+  <script src="./static/js/video_comparison.js"></script>
+
+  <link rel="stylesheet" href="./static/css/dics.original.css">
+  <script src="./static/js/event_handler.js"></script>
+  <script src="./static/js/dics.original.js"></script>
+  <script>
+    function openDemo(demoName) {
+      window.location = 'https://niujinshuchong.github.io/mip-splatting-demo/' + demoName + '.html';
+    }
+  </script>
+
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">MBA-SLAM</h1>
+          <h2 class="title is-2 publication-title" style="margin-top: 0; margin-bottom: 0"><font color="#9900FF">M</font>otion <font color="#9900FF">B</font>lur <font color="#9900FF">A</font>ware Dense Visual <font color="#9900FF">SLAM</font> with Radiance Fields Representation</h2>
+          <br>
+          <h2 class="title is-4" style="margin-top: 0; margin-bottom: 0">arXiv 2024</h2>
+          <br>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://wangpeng000.github.io/">Peng Wang</a><sup>1,2*</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://github.com/LingzheZhao">Lingzhe Zhao</a><sup>2*</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=BwX1pDAAAAAJ&hl=en&oi=ao">Yin Zhang</a><sup>1,2</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=FUlTzO4AAAAJ&hl=en">Shiyu Zhao</a><sup>2</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://ethliup.github.io/">Peidong Liu</a><sup>2</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Zhejiang University</span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="author-block"><sup>2</sup>Westlake University</span>
+          </div>
+
+          <!-- * denotes equal contribution. -->
+          <div class="is-size-6 publication-authors">
+            <span class="author-block">
+              <sup>*</sup> denotes equal contribution.
+            </span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="https://drive.google.com/file/d/1Q7KgGbynzcIEyFJV1I17HgrYz6xrOwRJ/view?usp=sharing"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2411.xxxx"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+          
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/WU-CVGL/MBA-SLAM"
+                   class="external-link button is-normal is-rounded is-dark disabled">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop height="100%">
+        <source src="./resources/videos/MBA-SLAM.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle">
+        Given a sequence of severe motion blurred images and depth, <font color="#9900FF">MBA-SLAM</font> can accurately estimate the <font color="#ed7d31">local camera motion trajectory</font> of each blurred image within the exposure time
+        and recovers the <font color="#209cee">high quality 3D scene</font>. It surpasses prior vSLAMs on both <font color="#c00000">sharp datasets</font> and <font color="#c00000">motion blurred datasets</font>.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<!--
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Reconstructions</h2>
+
+        <div class="embed-responsive embed-responsive-16by9">
+
+          <iframe style="clip-path: inset(1px 1px)" src="https://sketchfab.com/playlists/embed?collection=abee3cc1a7a7436c804f2bd3aadc2acd" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" mozallowfullscreen="true" webkitallowfullscreen="true" width="100%" height="100%" frameborder="0"></iframe>
+        </div>
+        
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+-->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" style="margin-top: -30px">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We propose a dense visual SLAM pipeline (i.e. <font color="#9900FF">MBA-SLAM</font>) to handle severe motion-blurred inputs. 
+            Our approach integrates <strong>an efficient motion blur-aware tracker with either neural radiance fields or Gaussian Splatting based mapper</strong>. 
+            By accurately modeling the physical image formation process of motion-blurred images, 
+            our method simultaneously learns 3D scene representation and estimates the cameras' local trajectory during exposure time, 
+            enabling proactive compensation for motion blur caused by camera movement. 
+          </p>
+          <p>
+            In our experiments, we demonstrate that <font color="#9900FF">MBA-SLAM</font> surpasses previous state-of-the-art methods in both camera localization and map reconstruction, 
+            showcasing superior performance across a range of datasets, including synthetic and real datasets featuring sharp images as well as those affected by motion blur, 
+            highlighting the versatility and robustness of our approach.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+    
+  </div>
+</section>
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3" style="margin-top: -20px">Motivation</h2>
+
+        <img src="./resources/images/pipeline.png" class="center">
+        <div class="content has-text-justified">
+          <p style="margin-top: 30px">
+            <strong>Tracking:</strong> Given the current blurry frame, the mapper first renders a virtual sharp image of the lastest blurry keyframe from the 3D scene. 
+            Our motion blur-aware tracker directly estimates the camera motion trajectory during the exposure time. 
+            <!-- Intermediate camera poses can be interpolated in <strong>SE</strong>(3) space.  -->
+            <strong>Mapping:</strong> Our mapper generates virtual sharp images along the camera trajectory, 
+            following the standard rendering procedures of Radiance Fields or Gaussian Splatting. 
+            The blurry image can then be synthesized by averaging these virtual images, 
+            adhering to the physical image formation model of motion-blurred images.
+          </p>
+        </div>
+
+      </div>
+    </div>
+    <!--/ Method. -->
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Results. -->
+    <div class="columns is-centered ">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered" style="margin-top: -30px">Results</h2>
+
+        <h3 class="title is-4">ArchViz Dataset</h3>
+
+        <h4 class="title is-5">Rendering</h4>
+        <div class="container">
+          <!-- <ul class="nav nav-tabs nav-fill nav-justified" id="object-scale-recon">
+              <li class="nav-item">
+                <a class="nav-link" onclick="objectSceneEvent(0)">bicycle</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" onclick="objectSceneEvent(1)">bonsai</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="objectSceneEvent(2)">counter</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="objectSceneEvent(3)">flowers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="objectSceneEvent(4)">garden</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="objectSceneEvent(5)">kitchen</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="objectSceneEvent(6)">stump</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="objectSceneEvent(7)">treehill</a>
+              </li>
+          </ul> -->
+          <div class="b-dics" style="width: 1000px; font-weight: 600;">
+              <img src="resources/images/render/archviz/input142.jpg" alt="Input">
+              <img src="resources/images/render/archviz/coslam142.png" alt="CoSLAM">
+              <img src="resources/images/render/archviz/eslam142.jpg" alt="ESLAM">
+              <img src="resources/images/render/archviz/point142.png" alt="Point-SLAM">
+              <img src="resources/images/render/archviz/splatam142.png" alt="SplaTAM">
+              <img src="resources/images/render/archviz/ours_nerf142.jpg" alt="Ours-NeRF">
+              <img src="resources/images/render/archviz/ours_gs142.png" alt="Ours-GS">
+              <img src="resources/images/render/archviz/gt142.jpg" alt="GT">
+          </div>
+        </div>
+
+        <br>
+
+        <h4 class="title is-5">Reconstruction</h4>
+          <div class="container">
+            <div class="b-dics" style="width: 1000px; font-weight: 600;">
+                <img src="resources/images/mesh/archviz/a1_coslam_mesh.png" alt="CoSLAM">
+                <img src="resources/images/mesh/archviz/a1_eslam_mesh.png" alt="ESLAM">
+                <img src="resources/images/mesh/archviz/a1_splatam_mesh.png" alt="SplaTAM">
+                <img src="resources/images/mesh/archviz/a1_ours-nerf_mesh.png" alt="Ours-NeRF">
+                <img src="resources/images/mesh/archviz/a1_ours-gs_mesh.png" alt="Ours-GS">
+                <img src="resources/images/mesh/archviz/a1_gt_mesh.png" alt="Reference">
+            </div>
+          </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{wang2024mbaslam,
+      author    = {Wang, Peng and Zhao, Lingzhe and Zhang, Yin and Zhao, Shiyu and Liu, Peidong},
+      title     = {{MBA-SLAM: Motion Blur Aware Dense Visual SLAM with Radiance Fields Representation}},
+      journal   = {arXiv preprint arXiv:2411.xxxxx},
+      year      = {2024}
+  }</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <!-- <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://homes.cs.washington.edu/~kpar/nerfies/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div> -->
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            The source code of this website is borrowed from 
+            <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
+          </p>
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/wangpeng000/wangpeng000.github.io/tree/main/BAD-NeRF">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
